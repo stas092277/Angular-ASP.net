@@ -1,0 +1,20 @@
+<div  *ngIf="isUserLogged" class="top-bar foundation-5-top-bar navBar">
+    <div class="top-bar-title">
+          <a routerLink='posts'>
+            <img src="assets/img/projectlogo.png" width="100px">
+          </a>
+    </div>
+    <div id="responsive-menu">
+      <div class="top-bar-left">
+        <ul class="dropdown vertical medium-horizontal menu navButtons" data-responsive-menu="drilldown medium-dropdown" data-auto-height="true" data-animate-height="true">
+          <li> <input type="search" [(ngModel)]="searchItem" name="search" placeholder="Поиск" class="animated-search-form" (keyup.enter)="searchPosts()">
+          </li>
+          <li><a routerLink='posts' routerLinkActive="active" >Главная</a></li>
+          <li><a routerLink="/faq" routerLinkActive="active">Гид</a></li>
+          <li><a routerLink='/user/{{currentUser.id}}' routerLinkActive="active">Личный кабинет</a></li>
+          <li><a routerLink="/about" routerLinkActive="active">О сайте</a></li>
+          <li><a *ngIf="isUserLogged" (click)="LogOut()">Выход</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,53 @@
+
+<div class="content">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<!-- <link rel="stylesheet" href="assets/css/simplemode.min.css"> -->
+
+<div class="add-post-form-wrap">
+
+    <form class="addpost-form">
+            <div class="text-center">
+                    <h1 >Добавление нового поста</h1>
+                    </div>
+        <div class="header-input">
+            <input type="text" name="title"  [(ngModel)]="title"   placeholder="Заголовок темы (можно оставить пустым)" />
+        </div>
+        <div class="post-input-background" style="color: black">
+                <md-editor name="Content"
+
+                [(ngModel)]="content"
+                [height]="'350px'"
+
+                required
+                maxlength="500">
+                </md-editor>
+        </div>
+
+        <div class="footer-add-post">
+            <div class="tags-wrap">
+                <div class="tag-input">
+                    <input id="newTag" type="text" placeholder="Тэги" #newTag />
+                </div>
+                <div class="add-tag " (click)="addTag(newTag.value)"></div>
+                <div class="inputed-tags">
+                    <div *ngFor="let tag of tags; let i = index" class="tag" (click)="deleteTag(i)">{{tag}}</div>
+                </div>
+            </div>
+            <div class="switch-anon">
+                <label class="text-annon">Опубликовать анонимно:</label>
+                <input type="checkbox" class="switch" id="switch1">
+                <label for="switch1" class="switch-for"></label>
+            </div>
+
+        </div>
+
+        <div class="post-button-wrap">
+        <button class="post-button" (click)="addPost()">Опубликовать</button>
+        </div>
+    </form>
+</div>
+
+<script src="assets/js/simplemde.min.js"></script>
+</div>

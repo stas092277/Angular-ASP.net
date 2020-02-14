@@ -1,0 +1,14 @@
+
+<form class="callout text-center">
+    <h2>Присоединяйся!</h2>
+    <input type="email" id="Email" name="email" placeholder="Корпоративный Email" [(ngModel)]="RegUser.Email" #test>
+    <input type="text" id="firstName" name="firstName" placeholder="Имя" [(ngModel)]="RegUser.FirstName" #test2>
+    <input type="text" id="lastName" name="lastName" placeholder="Фамилия" [(ngModel)]="RegUser.LastName">
+    <input type="password" id="password" name="password" placeholder="Пароль" [(ngModel)]="RegUser.Password">
+    <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Подтвердите пароль" [(ngModel)]="RegUser.PasswordConfirm">
+    <!-- <p>Мы сгенерируем пароль и вышлем его на твою почту</p> -->
+    <p></p>
+    <input class="button expanded" type="submit" value="Зарегистрироваться" (click)="
+    RegisterSubmit()">
+
+</form>

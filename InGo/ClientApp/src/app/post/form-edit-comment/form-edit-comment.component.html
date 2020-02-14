@@ -1,0 +1,8 @@
+<div class="post-input">
+  <textarea class="post-input-form" name="text" [(ngModel)]="newCommentContent" placeholder="Введите комментарий"></textarea>
+</div>
+
+<div class="flex-add-comment-button">
+  <div class="pophidden"></div>
+  <button (click)="addComment()" class="add-comment-button">Добавить</button>
+</div>

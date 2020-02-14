@@ -1,0 +1,79 @@
+<div class="content" *ngIf ="post">
+<main class="posts-list">
+  <article class="post edit-post" id="post1">
+        <div class="post-top">
+            <div class="post-title" href=""><div class="cursor">{{post.title}}</div></div>
+            <div class="post-publishment">
+                <a class="post-author"  routerLink='/user/{{post.author.id}}' >
+                    <div class="post-author-image" >
+                        <img src={{post.author.imgUrl}}>
+                    </div>
+                    <div class="post-author-info">
+                        <div>
+                            <span class="post-author-name">{{post.author?.firstName}} {{post.author?.lastName}}</span>
+                            <span class="post-author-type">
+                                <sup>[{{post.author?.type}}]</sup>
+                            </span>
+                        </div>
+                        <div>
+                            <img class="user-achievement" src="assets/img/achievements/crown.png" title="Популярный"/>
+                            <img class="user-achievement" src="assets/img/achievements/mortarboard.png" title="Полезный"/>
+                        </div>
+                    </div>
+                </a>
+                <div class="post-date">{{post.publishDate| date: "medium" }}</div>
+                <div class="post-achievements-list">
+                    <img class="post-achievement" src="assets/img/achievements/crown.png" title="Популярный пост">
+                    <img class="post-achievement" src="assets/img/achievements/mortarboard.png" title="Полезный пост">
+                </div>
+            </div>
+            <div class="tags-list">
+                <a *ngFor=" let tag of post.tags" class="tag" >{{tag.name}}</a>
+                <!-- <a class="tag" href="">tag1</a>
+                <a class="tag" href="">tag2</a>
+                <a class="tag" href="">tag3</a> -->
+            </div>
+
+        </div>
+
+        <div class="post-content post-content-full" markdown>
+            {{post.content}}
+        </div>
+
+
+        <div class="post-bot-wrap">
+            <div class="post-bot">
+                <button class="transparent-button blue-button post-bot-button"
+                  [class.post-bot-button-active]="post.liked" (click)="like(post)">
+                      <img class="post-bot-button-back post-like-back" src="assets/img/marks/EmptyLike.png" />
+                      <img class="post-bot-button-left post-like-left" src="assets/img/marks/LikeLeft.png" />
+                      <img class="post-bot-button-right post-like-right" src="assets/img/marks/LikeRight.png" />
+                      <div class="post-bot-button-counter">{{post.likesCount}}</div>
+                  </button>
+                  <button class="transparent-button blue-button post-bot-button"
+                  [class.post-bot-button-active]="post.saved" (click)="save(post)">
+                      <img class="post-bot-button-back post-save-back" src="assets/img/marks/EmptyFav.png" />
+                      <img class="post-bot-button-left post-save-left" src="assets/img/marks/FaveLeft.png" />
+                      <img class="post-bot-button-right post-save-right" src="assets/img/marks/FaveRight.png" />
+                      <div class="post-bot-button-counter">{{post.savesCount}}</div>
+                  </button>
+            </div>
+
+            <div class="post-bot-edit">
+                <a *ngIf="isAdmin"  class="transparent-button post-bot-edit-to-faq" title="Отправить в раздел FAQ" >
+                    <img src="assets/img/edit/faq.png" />
+                </a>
+                <a *ngIf="isAdmin" class="transparent-button" title="Изменить" >
+                    <img src="assets/img/edit/edit.png" />
+                </a>
+                <a *ngIf="isAdmin || (post && isOwnPost(post.author.id))" (click)= "deletePost(post.id)" class="transparent-button" title="Удалить" >
+                    <img src="assets/img/edit/delete.png" />
+                </a>
+            </div>
+            <div class="post-button post-bot-comments" id="transbutton" ></div>
+        </div>
+
+        <app-comment [commentList]="post.comments"></app-comment>
+  </article>
+</main>
+</div>

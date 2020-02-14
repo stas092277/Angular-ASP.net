@@ -1,0 +1,27 @@
+<div *ngFor = "let commentData of commentList" >
+
+  <div class="post-example">
+    <div class="footer1">
+        <a routerLink='/user/{{commentData.author.id}}' class="user1">
+            <div class="photo1">
+                <img src={{commentData.author.imgUrl}}>
+            </div>
+            <div class="name-date1">
+                <div class="name1">{{commentData.author.firstName}} {{commentData.author.lastName}}</div>
+                <div class="date1">{{commentData.publishDate| date:"MM/dd/yy" }}</div>
+            </div>
+        </a>
+        <!-- <div class="likes1">
+            <button class="transparent-button blue-button post-bot-button" onclick="onPostButtonClick(this)">
+                <img class="post-bot-button-back post-like-back" src="assets/img/marks/EmptyLike.png" />
+                <img class="post-bot-button-left post-like-left" src="assets/img/marks/LikeLeft.png" />
+                <img class="post-bot-button-right post-like-right" src="assets/img/marks/LikeRight.png" />
+                <div class="post-bot-button-counter">{{commentData.likesCount}}</div>
+            </button>
+        </div> -->
+    </div>
+    <div class="content1">{{commentData.content}}</div>
+  </div>
+
+</div>
+<app-form-edit-comment (OutToComment)="receiveComment($event)"></app-form-edit-comment>

@@ -1,0 +1,257 @@
+$header-color: #262c48
+$header-text-color: #F5F5F5
+$highlight-color: #ECA400
+$highlight-color-dark: #EC7147
+$post-color: #1d4e94f0
+
+.content
+  min-height: 70vh
+  flex-direction: column
+  justify-content: center
+
+  h3
+    text-align: center
+    margin-top: 10px
+.profile-card-action-icons
+  background-color: $header-color
+  color: $header-text-color
+  font-weight: 400
+  margin-bottom: 1.6rem
+  border-radius: 0.125rem
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.18), 0 0.125rem 2px rgba(0, 0, 0, 0.36)
+
+
+.profile-card-action-icons .card-section
+  background-color: inherit
+  padding: 0.5rem 0 0
+
+
+.profile-card-action-icons .card-section .profile-card-header,
+.profile-card-action-icons .card-section .profile-card-about
+  padding: 0.7rem 1rem
+
+
+.profile-card-action-icons .card-section .profile-card-header
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  -webkit-align-items: flex-start
+      -ms-flex-align: start
+          align-items: flex-start
+
+
+.profile-card-action-icons .card-section .profile-card-header .profile-card-avatar
+  margin-right: 0.5rem
+
+
+.profile-card-action-icons .card-section .profile-card-header .profile-card-avatar .avatar-image
+  border-radius: 50%
+  width: auto
+  height: 3.75rem
+  margin: 10px
+
+
+
+
+.profile-card-action-icons .card-section .profile-card-header .profile-card-author
+  -webkit-flex: 1 0 0
+      -ms-flex: 1 0 0px
+          flex: 1 0 0
+  margin-top: 0.3rem
+  padding-bottom: 0
+
+
+.profile-card-action-icons .card-section .profile-card-header .profile-card-author .author-title,
+.profile-card-action-icons .card-section .profile-card-header .profile-card-author .author-description
+  margin-bottom: 0
+
+
+.profile-card-action-icons .card-section .profile-card-header .profile-card-author .author-title
+  color: $header-text-color
+
+
+.profile-card-action-icons .card-section .profile-card-header .profile-card-author .author-description
+  color: $highlight-color
+  font-size: 0.9em
+
+
+.profile-card-action-icons .card-section .profile-card-about .about-title
+  text-transform: uppercase
+
+
+.profile-card-action-icons .card-section .profile-card-about .separator-left
+  text-align: left
+
+
+.profile-card-action-icons .card-section .profile-card-about .separator-left::before, .profile-card-action-icons .card-section .profile-card-about .separator-left::after
+  display: table
+  content: ' '
+  -webkit-flex-basis: 0
+      -ms-flex-preferred-size: 0
+          flex-basis: 0
+  -webkit-order: 1
+      -ms-flex-order: 1
+          order: 1
+
+
+.profile-card-action-icons .card-section .profile-card-about .separator-left::after
+  clear: both
+
+
+.profile-card-action-icons .card-section .profile-card-about .separator-left::after
+  position: relative
+  width: 3rem
+  margin: 0.3rem auto 0
+  margin-left: 0
+
+
+.profile-card-action-icons .card-section .profile-card-about .about-content
+  margin-bottom: 0
+
+
+.profile-card-action-icons .card-section .profile-card-about .about-skills
+  margin-top: 0.6rem
+
+
+.profile-card-action-icons .card-section .profile-card-about .about-skills ul.arrow
+  list-style-type: none
+  padding-left: 0
+  margin-left: 0
+  margin-bottom: 0
+
+
+
+.profile-card-action-icons .card-section .profile-card-about .about-skills ul.arrow li:before
+  content: '\f006'
+  font-family: 'FontAwesome'
+  float: left
+  color: #1779ba
+  margin-right: 0.5rem
+
+
+.profile-card-action-icons .card-section .profile-card-action
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+
+
+.profile-card-action-icons .card-section .profile-card-action .action-area
+  width: 20%
+  text-align: center
+  padding-top: 0.4rem
+  padding-bottom: 0.4rem
+
+
+.profile-card-action-icons .card-section .profile-card-action .action-area:last-of-type
+  border-right: none
+
+
+.profile-card-action-icons .card-section .profile-card-action .action-area .action-anchor.has-tip
+  border-bottom: none
+  cursor: pointer
+
+
+.profile-card-action-icons .card-section .profile-card-action .action-area .action-anchor .fa
+  color: $header-text-color
+
+.userHeader
+  display: flex
+  flex-direction: row
+  flex-flow: wrap
+
+
+.userBadges
+  ul
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    flex-flow: wrap
+    li
+      margin: 0.5em
+
+.userCard
+  display: flex
+  width: 23%
+  margin: 1.3em auto
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .5)
+  min-width: 500px
+  margin-bottom: auto
+  .about-skills
+    display: flex
+    flex-direction: row
+    margin: 3em 1em 0 1em
+    justify-content: space-evenly
+    ul
+      display: flex
+      flex-direction: row
+      flex-flow: wrap
+      li
+        margin: 0.5em
+
+.userLinksArea
+  justify-content: center
+
+.userAboutCard
+  background-color: $header-text-color
+  color: black
+
+
+.userCard
+  width: 900px
+
+
+
+.post-input-form
+  width: 99%
+  height: 25px
+  border: none
+  border-radius: 5px
+  padding: 5px
+  margin: 15px auto 0 auto
+  outline: none
+  resize: none
+  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+
+  &:focus
+    background-color: #bddbff
+
+.flex-add-comment-button
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  padding: 5px
+
+
+.add-comment-button
+  display: block
+  font-weight: 200
+  color: #F5F5F5
+  text-align: center
+  vertical-align: middle
+  background-color: $header-color
+  border: 1px transparent
+  width: 90px
+  padding: 0.275rem 0.65rem
+  font-size: 0.8rem
+  border-radius: 5px
+  left: 90%
+  margin-top: 0.75em
+  cursor: pointer
+
+  &:hover
+    background-color: $highlight-color
+    transition: all 0.1s
+    cursor: pointers
+
+small
+  cursor: pointer
+
+
+.flex-button
+  display: flex
+  justify-content: center
+
+
+.about-content
+  word-wrap: break-word

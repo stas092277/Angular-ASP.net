@@ -1,0 +1,30 @@
+
+<main class="posts-list">
+  <h2>Гид</h2>
+  <div *ngFor = 'let post of faqData' >
+    <article class="post edit-post" id="post1">
+          <div class="post-top">
+              <div class="post-title" href="">{{post.question}}</div>
+              <div class="post-publishment">
+                  <div class="post-date">{{post.publishDate| date:'short' }}</div>
+              </div>
+          </div>
+
+          <div class="post-content post-content-full" markdown>
+              {{post.answer}}
+          </div>
+              <div class="post-bot-edit">
+                  <a  *ngIf="isAdmin" class="transparent-button post-bot-edit-to-faq" title="Отправить в раздел FAQ" href="">
+                      <img src="assets/img/edit/faq.png" />
+                  </a>
+                  <a *ngIf="isAdmin" class="transparent-button" title="Изменить" href="">
+                      <img src="assets/img/edit/edit.png" />
+                  </a>
+                  <a  *ngIf="isAdmin" class="transparent-button" title="Удалить" href="">
+                      <img src="assets/img/edit/delete.png" />
+                  </a>
+              </div>
+    </article>
+  </div>
+</main>
+

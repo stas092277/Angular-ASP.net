@@ -1,0 +1,12 @@
+<form class="callout text-center">
+  <h2>Заходи!</h2>
+  <div class="floated-label-wrapper">
+    <label for="email">Корпоративный Email</label>
+    <input type="email" id="email" name="email input" placeholder="Корпоративный Email" [(ngModel)]="LogUser.Email">
+  </div>
+  <div class="floated-label-wrapper">
+    <label for="pass">Пароль</label>
+    <input type="password" id="pass" name="password input" placeholder="Пароль" [(ngModel)]="LogUser.Password">
+  </div>
+  <input class="button expanded" type="submit" value="Войти" (click)="LoginSubmit()">
+</form>

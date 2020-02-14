@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+<div class="content">
+<div class="card profile-card-action-icons userCard">
+  <div class="card-section">
+    <div class="profile-card-header userHeader">
+      <div class="profile-card-avatar">
+          <input  type="file" #file placeholder="Choose file" (change)="uploadPhoto(file.files)" style="display:none;">
+          <button  type="button" class="btn btn-success" (click)="file.click()"><img class="avatar-image" src={{user?.imgUrl}} alt="UserName" width="100px"></button>
+
+      </div>
+      <div class="profile-card-author">
+        <h5 class="author-title">{{user?.lastName}} {{user?.firstName}}  [{{user?.type}}]</h5>
+        <p class="author-description">Full-stack разработчик</p>
+      </div>
+      <div class="userBadges">
+        <ul class="arrow">
+          <li>
+            <div data-tooltip class="top" tabindex="2" title="Ментор!">
+              <img src="assets/img/BadgeMod.png" width=30px>
+            </div>
+          </li>
+          <li>
+            <div data-tooltip class="top" tabindex="2" title="Знающий автор!">
+              <img src="assets/img/favbadge.png" width=30px>
+            </div>
+          </li>
+          <li>
+            <div data-tooltip class="top" tabindex="2" title="Популярный автор!">
+              <img src="assets/img/morelike.png" width=30px>
+            </div>
+          </li>
+          <div>
+            <div data-tooltip class="top" tabindex="2" title="Более 10 постов в FAQ!">
+              <img src="assets/img/coolerrocket.png" width=30px>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="profile-card-about userAboutCard">
+      <h5 *ngIf="user && isMyProfile(user)" class="about-title separator-left">О себе <small *ngIf="boolEditInfo==false" (click)="boolEditInfo=true">редактировать</small></h5>
+      <div class="edit-info" *ngIf="boolEditInfo">
+        <textarea class="post-input-form" name="text" #content placeholder="Введите информацию о себе"></textarea>
+        <div class="flex-button">
+          <button (click)="boolEditInfo=false; UpdateUserAbout(content.value)" class="add-comment-button">Обновить</button>
+        </div>
+      </div>
+      <p class="about-content" *ngIf="user && boolEditInfo==false" >
+        <!-- Full-stack разработчик, работаю в Ингосстрахе с 2019 года. -->
+        {{user.about}}
+      </p>
+      <div class="row about-skills">
+        <div class="small-6 columns">
+          <ul class="arrow">
+            <li>C#</li>
+            <li>JavaScript</li>
+            <li>Angular</li>
+          </ul>
+        </div>
+        <div class="small-6 columns">
+          <ul class="arrow">
+            <li>SQL</li>
+            <li>Боулинг</li>
+            <li>Йога</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="profile-card-action userLinksArea">
+      <div class="action-area">
+        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Профиль vk">
+          <img src="assets/img/ico/vk.png" width=30px>
+          <span class="show-for-sr">Профиль vk</span>
+        </a>
+      </div>
+      <div class="action-area">
+        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Страница instagram">
+            <img src="assets/img/ico/instagram.png" width=30px>
+          <span class="show-for-sr">Страница instagram</span>
+        </a>
+      </div>
+      <div class="action-area">
+        <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Написать в telegram">
+            <img src="assets/img/ico/telegram.png" width=30px>
+          <span class="show-for-sr">Профиль telegram</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<app-user-sort-table *ngIf="user && isMyProfile(user)"  (outPostLost)='receivePostFromTag($event)'></app-user-sort-table>
+<app-feed-posts [postsData]="postUserList"></app-feed-posts>
+</div>
+<app-add-post-button ></app-add-post-button>
+
+

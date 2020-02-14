@@ -1,0 +1,242 @@
+$header-color: #262c48
+$header-text-color: #F5F5F5
+$highlight-color: #ECA400
+$highlight-color-dark: #EC7147
+
+.content
+  min-height: 75vh
+  font-family: Roboto
+
+.add-post-form-wrap
+  width: 900px
+  max-width: 90%
+  margin-left: auto
+  margin-right: auto
+  padding-bottom: 150px
+  min-width: 750px
+
+
+.addpost-form
+  margin-top: 30px
+  padding: 20px 20px
+  background-color: #1d4e94f0
+  color: #f5f5f5
+  font-family: Roboto, sans-serif
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .5)
+
+
+.editor-toolbar
+  background-color: white
+  opacity: 0.8
+
+.editor-toolbar a.active,
+.editor-toolbar a:hover
+  background: white
+  background-color: #f0ad41
+
+
+.footer-add-post
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+
+
+/*ТЭГИ СТАРТ*/
+
+.tags-wrap
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  margin: 10px 0
+  width: 85%
+  align-items: center
+
+.tag
+  display: inline-block
+  font-size: 13px
+  background-color: $header-color
+  border-radius: 50vh
+  padding: 4px 10px
+  margin-right: 1rem
+  margin-right: 0.5rem
+  transition: background-color 0.5s
+  text-decoration: none
+  color: white
+  transition: all 0.1s
+  cursor: pointer
+  margin-bottom: 5px
+
+  &:hover
+    background-color: $highlight-color
+
+  &:active
+    background-color: $highlight-color-dark
+
+
+.add-tag
+  margin-right: 20px
+
+
+.add-tag::before
+  content: "\f055"
+  font-family: FontAwesome
+  font-size: 20px
+  color: white
+  outline: none
+  transition: all 0.1s
+  cursor: pointer
+  margin-left: 10px
+
+
+.add-tag:hover::before
+  opacity: 0.7
+
+
+/* форма ввода тэгов старт*/
+.tag-input input[type="text"]
+  height: 18px
+  font-size: 15px
+  margin-bottom: 4px
+  border-radius: 4px
+  padding-left: 5px
+  border: none
+  outline: none
+  font-family: Roboto, Sans-Serif
+  font-size: 15px
+  font-weight: 200
+
+
+/* форма ввода тэгов конец*/
+
+/*ТЪГИ КОНЕЦ"*/
+/*КНОПКА ДОБАВЛЕНИЯ ПОСТА СТАРТ"*/
+.post-button
+
+  font-weight: 400
+  color: #f5f5f5
+  text-align: center
+  background-color: $header-color
+  border: 1px transparent
+  height: 30px
+  padding: 0.275rem 0.65rem
+  font-size: 0.9rem
+  border-radius: 5px
+  cursor: pointer
+
+.post-button:hover
+  background-color: $highlight-color
+
+#newTag
+  border-radius: 5px
+  width: 100px
+
+/*КНОПКА ДОБАВЛЕНИЯ ПОСТА КОНЕЦ"*/
+/*Переключатель анонимности СТАРТ */
+
+.text-annon
+  color: $header-text-color
+  font-size: 14px
+  align-items: center
+
+.switch-anon
+  display: flex
+  flex-direction: row
+  padding-bottom: 8px
+  min-width: 260px
+  width: 15%
+  margin-top: 10px
+
+
+.switch-for
+  cursor: pointer
+  font-size: 16px
+  line-height: 25px
+  position: relative
+  margin-top: 5px
+
+
+.switch-for::after
+  content: ""
+  width: 50px
+  height: 25px
+  background-color: white
+  border: 1px solid black
+  border-radius: 15px
+  position: absolute
+  top: -4px
+  right: -62px
+
+
+.switch-for::before
+  content: ""
+  height: 21px
+  width: 21px
+  background-color: gray
+  border-radius: 50%
+  position: absolute
+  right: -35px
+  top: -2px
+  z-index: 2
+  transition-duration: 300ms
+
+
+.switch
+  display: none
+
+
+.switch:checked + .switch-for::before
+  right: -58px
+
+
+.switch:checked + .switch-for::after
+  background-color: #f0ad41
+  transition-duration: 500ms
+
+/*Переключатель анонимности КОНЕЦ */
+/* Заголовок старт */
+.header-input input[type="text"]
+  width: 99.3%
+  height: 30px
+  font-size: 15px
+  margin-bottom: 10px
+  border-radius: 5px
+  padding-left: 5px
+  border: none
+  outline: none
+  font-family: Roboto, Sans-Serif
+  font-size: 15px
+  font-weight: 400
+
+.inputed-tags
+    height: 50px
+    padding-top: 10px
+
+
+.post-button-wrap
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-end
+
+.action-buttons
+  padding-top: 10px
+
+
+.bold
+  font-weight: bold
+
+
+textarea.md-input
+  padding: 8px
+
+.outline
+  border: 1px solid #c0c0c0
+  border-radius: 4px
+
+
+.result-preview
+  padding: 10px
+  max-height: 350px
+  overflow: auto
+

@@ -1,0 +1,5 @@
+    <div class="tag-cloud">
+      <div  class="tag-cloud-individual-tag" (click)="onSelect([(tag.id)],tag)" [class.is-active]="tag === selectedTag" *ngFor="let tag of topTags">{{tag.name}}</div>
+    </div>
+
+<app-feed-posts></app-feed-posts>

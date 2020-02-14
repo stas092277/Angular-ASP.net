@@ -1,0 +1,180 @@
+$header-color: #262c48
+$header-text-color: #F5F5F5
+$highlight-color: #ECA400
+$highlight-color-dark: #EC7147
+
+.post-example
+  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+  margin-top: 2px
+  background-color: white
+  width: 99%
+  text-align: center
+  margin: 15px auto 0 auto
+  border-radius: 5px
+
+.post1
+  background-color: white
+  width: 100%
+  text-align: center
+  margin: 30px auto 0 auto
+  border-radius: 5px
+
+
+
+.footer1
+  position: relative
+  height: 50px
+  background-color: #262c48
+  display: flex
+  border-radius: 5px 5px 0 0
+
+
+.user1
+  width: 300px
+  height: 100%
+  margin-left: 3%
+  display: flex
+
+
+.photo1
+  border-radius: 50%
+  width: auto
+  height: 45px
+  margin-right: 10px
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  img
+    border-radius: 50%
+    height: inherit
+    width: auto
+
+
+
+
+.name-date1
+  width: 200px
+  height: 100px
+  text-align: left
+  margin-left: 5px
+  margin-top: 5px
+
+
+.name1
+  font-family: Rubik,Lato,lucida grande,lucida sans unicode,Tahoma,Sans-Serif
+  color: #fff
+  font-weight: 700
+  font-size: 18px
+
+
+.date1
+  color: gray
+  font-weight: 300
+  font-size: 12px
+
+
+.likes1
+  position: absolute
+  height: 40px
+  right: 0px
+  top: 10px
+
+
+.content1
+  text-align: left
+  color: black
+  padding: 10px
+  width: 50px
+  height: 40%
+  margin-top: 5px
+  margin-left: auto
+  margin-right: auto
+  width: 90%
+  word-wrap: break-word
+
+
+.post-bot-button
+  margin: 0 10px 0 0
+  padding: 2px 5px
+  border-radius: 50vh
+  border-style: none
+  display: inline-flex
+  text-align: center
+  position: relative
+  transition: .5s
+  cursor: pointer
+
+  img
+    width: 20px
+
+  div
+    color: white
+    font-weight: bold
+    margin-left: 8px
+    align-self: center
+
+
+
+.post-bot-button .post-bot-button-left
+  position: absolute
+  width: 10px
+
+
+.post-bot-button .post-bot-button-left
+  transform-origin: right
+  transform: perspective(100px) rotateY(-90deg)
+  transition: .5s
+  opacity: 0
+
+
+.post-bot-button:hover .post-bot-button-left
+  transform: perspective(100px) rotateY(0)
+  opacity: 1
+
+
+.post-bot-button .post-bot-button-right
+  position: absolute
+  left: 15px
+  width: 10px
+  transform-origin: left
+  transform: perspective(100px) rotateY(-90deg)
+  transition: .5s
+  opacity: 0
+
+
+.post-bot-button:active .post-bot-button-right
+  transform: perspective(100px) rotateY(0)
+  opacity: 1
+
+
+.post-bot-button-active .post-bot-button-left
+  transform: perspective(100px) rotateY(0)
+  opacity: 1
+
+
+.post-bot-button-active .post-bot-button-right
+  transform: perspective(100px) rotateY(0)
+  opacity: 1
+
+
+
+.blue-button
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 15px
+  padding: 2px 5px
+  border-radius: 15px
+  align-self: center
+  text-align: center
+  text-decoration: none
+  background: none
+  border-style: none
+  color: white
+  background-color: #262c48
+  transition: .5s
+
+  &:hover
+      cursor: pointer
+      background-color: #0b3e87
+
+  &:active
+      background-color: #262c48

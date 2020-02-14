@@ -1,0 +1,50 @@
+.blue-button
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 15px
+  padding: 2px 5px
+  align-self: center
+  text-align: center
+  text-decoration: none
+  background: none
+  border-style: none
+  color: white
+  background-color: #262c48
+  transition: .5s
+
+  &:hover
+      cursor: pointer
+      background-color: #0b3e87
+
+  &:active
+      background-color: #0b2e57
+
+  /* #region add-post-button */
+
+.add-post-button-container
+  position: fixed
+  right: 40px
+  bottom: 40px
+
+.add-post-button
+  padding: 10px
+  display: block
+  border-radius: 50%
+  display: flex
+
+  &:hover
+    transform: rotateZ(360deg)
+
+.add-post-button-icon
+  align-self: center
+  width: 45px
+  height: 45px
+  display: block
+  background-image: url(src/assets/img/posts/AddPost.png)
+  background-size: contain
+
+
+/* #endregion */
+
+
+
+

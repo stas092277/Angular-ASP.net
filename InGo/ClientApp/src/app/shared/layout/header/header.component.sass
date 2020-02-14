@@ -1,0 +1,38 @@
+
+$header-color: #262c48
+$header-text-color: #F5F5F5
+$highlight-color: #ECA400
+
+.navBar
+  display: flex
+  justify-content: center
+  flex-flow: wrap
+  align-content: center
+  height: 4em
+  background-color: $header-color
+  min-width: 1050px
+  ul
+    justify-content: center
+    flex-grow: 1
+    flex-flow: wrap
+    align-items: center
+    background-color: $header-color
+    a
+      color: $header-text-color
+      background-color: $header-color
+      &:hover
+        color: $highlight-color
+
+.top-bar
+  input
+    max-width: 40em
+    width:25em
+    height: 2em
+    margin: 5px
+
+.navButtons
+  background-color: $header-color
+
+.is-dropdown-submenu
+  border: 0
+  margin-top: 3em

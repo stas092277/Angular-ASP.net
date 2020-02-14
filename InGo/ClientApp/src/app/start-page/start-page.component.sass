@@ -1,0 +1,92 @@
+$header-color: #262c48
+$header-text-color: #F5F5F5
+$highlight-color: #ECA400
+$highlight-color-dark: #EC7147
+
+.content
+  min-height: 80vh
+
+.startpage
+  background-color: $header-color
+  color: $header-text-color
+  height: 80vh
+  align-items: center
+
+.work-feature-block
+  padding: 10px 0
+  border-top: 1px solid #cacaca
+  border-bottom: 1px solid #cacaca
+
+.work-feature-block-image
+  display: block
+  margin: auto
+  padding: 10px 0
+
+.greetImageFormBlock
+  display: flex
+  flex-direction: row
+  justify-content: center
+
+.authenticationForm
+  margin: 3em 7em 3em 1em
+  .regAuthTabs
+    width: 25em
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: center
+
+
+.greetBlock
+  ul
+    padding-left: 2em
+    li
+      a
+        color: $highlight-color
+      &:hover
+        color:  $highlight-color-dark
+  p
+    padding-left: 2em
+  h2
+    padding-left: 1.5em
+
+.logoImage
+  width: 60%
+
+.floated-label-wrapper
+  position: relative
+
+label
+  background: $highlight-color-dark
+  color: $header-text-color
+  font-size: 0.75rem
+  font-weight: 600
+  left: 0.75rem
+  opacity: 0
+  padding: 0 0.25rem
+  position: absolute
+  top: 2rem
+  transition: all 0.15s ease-in
+  z-index: -1
+
+  input[type=text],
+  input[type=email],
+  input[type=password]
+    border-radius: 4px
+    font-size: 1.75em
+    padding: 0.5em
+
+
+
+  &.show
+    opacity: 1
+    top: -0.85rem
+    z-index: 1
+    transition: all 0.15s ease-in
+
+
+
+
+
+
+

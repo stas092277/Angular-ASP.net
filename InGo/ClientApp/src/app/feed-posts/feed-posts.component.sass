@@ -1,0 +1,281 @@
+$header-color: #262c48
+$header-text-color: #F5F5F5
+$highlight-color: #ECA400
+$highlight-color-dark: #EC7147
+
+.content
+  min-height: 100vh
+
+.cursor
+  cursor: pointer
+.posts-list
+  width: 900px
+  max-width: 90%
+  margin-left: auto
+  margin-right: auto
+
+.post
+  background-color: #1d4e94f0
+  // border-radius: 15px
+  padding: 5px
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .5)
+  margin: 20px 0
+  font-family: Arial, sans-serif
+  color: white
+  overflow: hidden
+
+.post-top
+  padding: 5px
+
+.post-bot
+  padding: 5px
+  display: flex
+
+.post-content
+  color: black
+  background-color: #fcebdb
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+
+
+.post-content-full
+  padding: 20px
+  margin: 5px
+  border-radius: 5px
+  .language-language
+    border: 0
+
+.post-title-container
+  display: flex
+
+
+.post-title
+  font-size: 25px
+  text-align: center
+  font-weight: bold
+  color: white
+  margin-bottom: 5px
+
+
+.post-publishment
+  display: flex
+
+
+.post-date
+  margin-left: 10px
+  align-self: center
+
+
+
+/*Post-Author*/
+
+.post-author
+  background-color: $header-color
+  font-size: 18px
+  border-radius: 5px
+  padding: 5px
+  color: $header-text-color
+  transition: .5s
+  text-decoration: none
+  display: flex
+
+
+  &:hover
+    background-color: $highlight-color
+
+  &:active
+    background-color: #5f5f5f
+
+
+.post-author-type
+  font-size: 15px
+
+
+.post-author-image
+  border-radius: 50%
+  width: auto
+  height: 45px
+  margin-right: 10px
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  img
+    border-radius: 50%
+    height: inherit
+    width: auto
+
+
+/*Achievement*/
+
+.user-achievement
+  width: 20px
+
+
+.post-achievements-list
+  margin-left: auto
+  width: fit-content
+  float: right
+
+
+.post-achievement
+  width: 40px
+
+
+
+/*Tags*/
+
+.tags-list
+  text-align: center
+
+
+.tags-list-big
+  margin: 5px
+  margin-bottom: 40px
+
+
+.tag
+  display: inline-block
+  font-size: 13px
+  background-color: $header-color
+  border-radius: 50vh
+  padding: 4px 10px
+  margin: 2px
+  transition: background-color .5s
+  text-decoration: none
+  color: white
+
+  // &:hover
+  //   background-color: $highlight-color
+
+  // &:active
+  //   background-color: #0b2e57
+
+
+.tag-big
+  font-size: 18px
+  padding: 4px 15px
+  background-color: #1d4e94f0
+
+
+.post-bot-edit
+  flex-grow: 1
+  text-align: center
+  position: relative
+
+.post-bot-button
+  margin: 0 10px 0 0
+  padding: 2px 5px
+  border-radius: 50vh
+  border-style: none
+  display: inline-flex
+  text-align: center
+  position: relative
+  transition: .5s
+  cursor: pointer
+
+  img
+    width: 20px
+
+  div
+    color: white
+    font-weight: bold
+    margin-left: 8px
+    align-self: center
+
+
+.post-bot-button .post-bot-button-left
+  position: absolute
+  width: 10px
+  transform-origin: right
+  transform: perspective(100px) rotateY(-90deg)
+  transition: .5s
+  opacity: 0
+
+.post-bot-button:hover .post-bot-button-left
+  transform: perspective(100px) rotateY(0)
+  opacity: 1
+
+.post-bot-button .post-bot-button-right
+  position: absolute
+  left: 15px
+  width: 10px
+  transform-origin: left
+  transform: perspective(100px) rotateY(-90deg)
+  transition: .5s
+  opacity: 0
+
+.post-bot-button:active .post-bot-button-right
+  transform: perspective(100px) rotateY(0)
+  opacity: 1
+
+
+.post-bot-button-active .post-bot-button-left
+  transform: perspective(100px) rotateY(0)
+  opacity: 1
+
+.post-bot-button-active .post-bot-button-right
+  transform: perspective(100px) rotateY(0)
+  opacity: 1
+
+
+  /* Post-edit */
+
+.post-bot-wrap
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+
+.post-bot-edit *
+  transition: background-color .5s
+  padding: 2px 4px
+  display: inline-block
+  border-radius:10px
+
+
+  &:hover
+    background-color: #0b3e87
+
+  &:active
+    background-color: #0b2e57
+
+.post-bot-edit * img
+  height: 20px
+
+
+.post-bot-comments
+  margin-right: 5px
+  border-radius: 5px
+  padding: 3px
+  margin-left: auto
+  text-decoration: none
+  color: white
+  align-self: center
+  transition: .5s
+
+
+#transbutton
+  opacity: 0
+  cursor: default
+  width: 125px
+
+
+
+.blue-button
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 15px
+  padding: 2px 5px
+  // border-radius: 15px
+  align-self: center
+  text-align: center
+  text-decoration: none
+  color: white
+  background-color: $header-color
+  transition: .5s
+
+  &:hover
+      cursor: pointer
+      background-color: $highlight-color
+
+  &:active
+      background-color: $highlight-color-dark
+

@@ -1,0 +1,4 @@
+<app-category-selector  (outPostLost)='receivePostFromTag($event)'></app-category-selector>
+<app-popular-tag-cloud (outPostLost)='receivePostFromTag($event)'></app-popular-tag-cloud>
+<app-feed-posts [postsData]="postList"></app-feed-posts>
+<app-add-post-button></app-add-post-button>

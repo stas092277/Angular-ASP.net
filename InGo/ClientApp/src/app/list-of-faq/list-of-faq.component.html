@@ -1,0 +1,14 @@
+
+<div class="content">
+<ul class="list-group categorySelectorFAQ">
+  <li *ngFor="let topic of TOPICS" class="list-group-item"
+  [class.active]="topic === selectedTopic" (click)="onSelect(topic)">{{topic.description}}</li>
+</ul>
+
+
+<app-feed-faq [faqData]="postList"></app-feed-faq>
+  <div class="zero"></div>
+
+
+</div>
+<app-add-post-button ></app-add-post-button>
